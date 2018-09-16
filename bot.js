@@ -34,7 +34,8 @@ let mySupport = message.guild.roles.find('name', '✽ Mod Candidate');
     if(mention.roles.has(mySupport)) return message.reply('هذا الشخص معه الرتبة مسبقا');
 
     mention.addRole(mySupport).then(() => {
-      acRoom.send(`**[ ${mySupport} ] واعطائك رتبة ${mention} تم بنجاح قبولك**`);
+      acRoom.send(`**${mention} Thanks For Your Apply!. 
+You Get The @✽ Mod Candidate .**`);
     });
   }
 });
@@ -48,7 +49,7 @@ client.on('message',async message => {
   if(!message.guild.member(message.author).hasPermission("MANAGE_ROLES")) return;
   if(!mention) return message.reply("منشن شخص");
 
-  acRroom.send(`**${mention} تم رفضك للاسف**`)
+  acRroom.send(`**${mention} Sorry. You Got Rejected.**`)
   }
 });
   
