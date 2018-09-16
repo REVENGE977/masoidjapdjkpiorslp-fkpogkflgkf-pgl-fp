@@ -34,8 +34,8 @@ let mySupport = message.guild.roles.find('name', '✽ Mod Candidate');
     if(mention.roles.has(mySupport)) return message.reply('هذا الشخص معه الرتبة مسبقا');
 
     mention.addRole(mySupport).then(() => {
-      acRoom.send(`**${mention} Thanks For Your Apply!. 
-You Get The @✽ Mod Candidate .**`);
+      acRoom.send(`**${mention} Thanks For Your Apply.
+You Get The ✽ Mod Candidate**`);
     });
   }
 });
